@@ -83,6 +83,7 @@ begin
     Application.ProcessMessages;
     ProgressBar1.Style := pbstMarquee;
     ProgressBar1.Refresh;
+    BackupBtn.Enabled := False;
   end;
 end;
 
@@ -94,6 +95,7 @@ begin
     Application.ProcessMessages;
     ProgressBar1.Style := pbstNormal;
     ProgressBar1.Refresh;
+    BackupBtn.Enabled := True;
   end;
 end;
 

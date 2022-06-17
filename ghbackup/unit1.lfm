@@ -7,6 +7,7 @@ object MainForm: TMainForm
   ClientHeight = 693
   ClientWidth = 939
   KeyPreview = True
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnKeyUp = FormKeyUp
   SessionProperties = 'Edit1.Text;Edit2.Text;Edit3.Text;Left;Top'
@@ -124,10 +125,10 @@ object MainForm: TMainForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = SelDirBtn
-    AnchorSideBottom.Side = asrBottom
+    AnchorSideBottom.Side = asrCenter
     Left = 596
     Height = 14
-    Top = 78
+    Top = 67
     Width = 335
     Anchors = [akLeft, akRight, akBottom]
     BorderSpacing.Left = 10

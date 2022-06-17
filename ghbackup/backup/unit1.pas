@@ -32,6 +32,7 @@ type
     StaticText1: TStaticText;
     UpDown1: TUpDown;
     procedure Edit3Change(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
     procedure SelDirBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -126,6 +127,23 @@ end;
 procedure TMainForm.Edit3Change(Sender: TObject);
 begin
   Label5.Caption := Edit3.Text + '/1-BACKUP/GitHub.tar.gz';
+end;
+
+procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);
+begin
+  CanClose := False;
+  //Если идёт Бэкап...
+  if ProgressBar1.Style = pbstMarquee then
+    if MessageDlg('Идёт бэкап! Отменить?', mtConfirmation,
+      [mbYes, mbNo], 0) = mrYes then
+    begin
+      CancelBtn.Click;
+      CanClose := True;
+    end
+    else
+      Abort;
+
+  Canclose := True;
 end;
 
 //ESCAPE - Отмена

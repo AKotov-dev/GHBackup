@@ -94,7 +94,6 @@ begin
     Application.ProcessMessages;
     ProgressBar1.Style := pbstNormal;
     ProgressBar1.Refresh;
- //   LogMemo.Append('Cancel...');
   end;
 end;
 

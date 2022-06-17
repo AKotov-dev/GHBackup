@@ -71,6 +71,10 @@ msgstr ""
 msgid "The working directory will be cleared! Continue?"
 msgstr ""
 
+#: unit1.swarningclose
+msgid "Backup is running! Cancel?"
+msgstr ""
+
 #: unit1.swarningmsg
 msgid "Enter Login and Working directory!"
 msgstr ""

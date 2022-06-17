@@ -82,6 +82,10 @@ msgstr "Старт клонирования"
 msgid "The working directory will be cleared! Continue?"
 msgstr "Рабочий каталог будет очищен! Продолжить?"
 
+#: unit1.swarningclose
+msgid "Backup is running! Cancel?"
+msgstr "Бэкап запущен! Отменить?"
+
 #: unit1.swarningmsg
 msgid "Enter Login and Working directory!"
 msgstr "Введите Логин и Рабочий каталог!"

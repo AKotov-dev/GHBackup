@@ -1,5 +1,6 @@
 {"version":1,"strings":[
 {"hash":245300417,"name":"unit1.swarningmsg","sourcebytes":[69,110,116,101,114,32,76,111,103,105,110,32,97,110,100,32,87,111,114,107,105,110,103,32,100,105,114,101,99,116,111,114,121,33],"value":"Enter Login and Working directory!"},
 {"hash":138898559,"name":"unit1.sstartwarning","sourcebytes":[84,104,101,32,119,111,114,107,105,110,103,32,100,105,114,101,99,116,111,114,121,32,119,105,108,108,32,98,101,32,99,108,101,97,114,101,100,33,32,67,111,110,116,105,110,117,101,63],"value":"The working directory will be cleared! Continue?"},
-{"hash":77519479,"name":"unit1.sstartcloning","sourcebytes":[83,116,97,114,116,32,99,108,111,110,105,110,103],"value":"Start cloning"}
+{"hash":77519479,"name":"unit1.sstartcloning","sourcebytes":[83,116,97,114,116,32,99,108,111,110,105,110,103],"value":"Start cloning"},
+{"hash":175462015,"name":"unit1.swarningclose","sourcebytes":[66,97,99,107,117,112,32,105,115,32,114,117,110,110,105,110,103,33,32,67,97,110,99,101,108,63],"value":"Backup is running! Cancel?"}
 ]}
