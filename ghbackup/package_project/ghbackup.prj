@@ -25,13 +25,13 @@ vendor=alex_q_2000 (C) 2022
 summary=Backup of GitHub repositories
 
 [URLCOPY]
-urlcopy=111
+urlcopy=https://github.com/AKotov-dev/GHBackup
 
 [LICENSE]
 license=GPLv3
 
 [DEPS]
-deps=curl git
+deps=curl git tar gzip
 
 [META]
 meta=0
