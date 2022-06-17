@@ -133,7 +133,7 @@ end;
 procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);
 begin
   //Если идёт Бэкап...
-  if ProgressBar1.Style = pbstMarquee then
+  if not BackupBtn.Enabled then
     if MessageDlg(SWarningClose, mtWarning, [mbYes, mbNo], 0) = mrYes then
     begin
       CancelBtn.Click;

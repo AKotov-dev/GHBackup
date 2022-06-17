@@ -125,10 +125,10 @@ object MainForm: TMainForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = SelDirBtn
-    AnchorSideBottom.Side = asrCenter
+    AnchorSideBottom.Side = asrBottom
     Left = 596
     Height = 14
-    Top = 67
+    Top = 78
     Width = 335
     Anchors = [akLeft, akRight, akBottom]
     BorderSpacing.Left = 10
