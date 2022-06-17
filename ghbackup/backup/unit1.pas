@@ -49,6 +49,7 @@ resourcestring
   SWarningMsg = 'Enter Login and Working directory!';
   SStartWarning = 'The working directory will be cleared! Continue?';
   SStartCloning = 'Start cloning';
+  SWarningClose = 'Backup is running! Cancel?';
 
 var
   MainForm: TMainForm;
@@ -131,19 +132,15 @@ end;
 
 procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);
 begin
-  CanClose := False;
   //Если идёт Бэкап...
   if ProgressBar1.Style = pbstMarquee then
-    if MessageDlg('Идёт бэкап! Отменить?', mtConfirmation,
-      [mbYes, mbNo], 0) = mrYes then
+    if MessageDlg(SWarningClose, mtWarning, [mbYes, mbNo], 0) = mrYes then
     begin
       CancelBtn.Click;
       CanClose := True;
     end
     else
-      Abort;
-
-  Canclose := True;
+      Canclose := False;
 end;
 
 //ESCAPE - Отмена
