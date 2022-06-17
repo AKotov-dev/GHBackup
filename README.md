@@ -3,4 +3,4 @@
 
 The program is designed to quickly clone public repositories from GitHub. After launching, specify the `Login`, `Number of repositories`, `Working directory` and click `Backup`. As a result, a shallow clone of all repositories and the final archive will be obtained: `~/WorkDir/1-BACKUP/GitHub.tar/gz`. GHBackup will be useful for those who decide to save their works before the episode of Russia's global isolation from the world community.  
   
-![](https://github.com/AKotov-dev/GHBackup/blob/main/ScreenShots/GHBackup-1.png)  
+![](https://github.com/AKotov-dev/GHBackup/blob/main/ScreenShots/GHBackup-2.png)  
