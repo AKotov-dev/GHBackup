@@ -1,0 +1,77 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: tmainform.backupbtn.caption
+msgctxt "tmainform.backupbtn.caption"
+msgid "Backup"
+msgstr ""
+
+#: tmainform.backupbtn.hint
+msgctxt "tmainform.backupbtn.hint"
+msgid "[Enter] - Backup"
+msgstr ""
+
+#: tmainform.cancelbtn.caption
+msgctxt "tmainform.cancelbtn.caption"
+msgid "Cancel"
+msgstr ""
+
+#: tmainform.cancelbtn.hint
+msgctxt "tmainform.cancelbtn.hint"
+msgid "[Esc - Cancel]"
+msgstr ""
+
+#: tmainform.caption
+msgid "GHBackup"
+msgstr ""
+
+#: tmainform.checkbox1.caption
+msgid "--depth 1"
+msgstr ""
+
+#: tmainform.checkbox1.hint
+msgid "Shallow clone"
+msgstr ""
+
+#: tmainform.label1.caption
+msgid "Login:"
+msgstr ""
+
+#: tmainform.label2.caption
+msgid "Total repositories:"
+msgstr ""
+
+#: tmainform.label3.caption
+msgid "Work directory:"
+msgstr ""
+
+#: tmainform.label4.caption
+msgid "Backup file:"
+msgstr ""
+
+#: tmainform.label5.caption
+msgctxt "tmainform.label5.caption"
+msgid "..."
+msgstr ""
+
+#: tmainform.seldirbtn.caption
+msgctxt "tmainform.seldirbtn.caption"
+msgid "..."
+msgstr ""
+
+#: tmainform.statictext1.caption
+msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+msgstr ""
+
+#: unit1.sstartcloning
+msgid "Start cloning"
+msgstr ""
+
+#: unit1.sstartwarning
+msgid "The working directory will be cleared! Continue?"
+msgstr ""
+
+#: unit1.swarningmsg
+msgid "Enter Login and Working directory!"
+msgstr ""
+

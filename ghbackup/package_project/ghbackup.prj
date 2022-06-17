@@ -1,0 +1,84 @@
+[NAME]
+name=ghbackup
+
+[VERSION]
+version=0.1
+
+[RELEASE]
+release=0.mrx9
+
+[GROUP]
+group=Applications/System
+
+[DESCRIPTION]
+0=Backup of GitHub repositories
+1=---
+2=More information: /usr/share/doc/package_name/repack.txt
+
+[MAINTAINER]
+maintainer=Alex Kotov
+
+[VENDOR]
+vendor=alex_q_2000 (C) 2022
+
+[SUMMARY]
+summary=Backup of GitHub repositories
+
+[URLCOPY]
+urlcopy=111
+
+[LICENSE]
+license=GPLv3
+
+[DEPS]
+deps=curl git
+
+[META]
+meta=0
+
+[NOARCH]
+noarch=0
+
+[SIGN]
+sign=0
+
+[DEB]
+deb=1
+
+[FILES]
+0=/usr/share/applications/ghbackup.desktop
+1=/usr/share/icons/ghbackup.png
+2=/usr/share/ghbackup/
+3=/usr/share/doc/ghbackup/
+
+[AFTERINSTALL]
+0=#!/bin/bash
+1=#ldconfig
+2=#update-desktop-database -q /usr/share/applications
+3=#update-mime-database /usr/share/mime
+4=#gtk-update-icon-cache -q -f /usr/share/icons/hicolor
+
+[AFTERREMOVE]
+0=#!/bin/bash
+1=#ldconfig
+2=#update-desktop-database -q /usr/share/applications
+3=#update-mime-database /usr/share/mime
+4=#gtk-update-icon-cache -q -f /usr/share/icons/hicolor
+
+[URL32]
+url32=11
+
+[URL64]
+url64=
+
+[PROGRAMNAME]
+programname=GHBackup
+
+[DEVTOOL]
+devtool=Lazarus
+
+[TOOLVERSION]
+toolversion=2.2.0
+
+[INFO]
+0=v0.1 - Initial release

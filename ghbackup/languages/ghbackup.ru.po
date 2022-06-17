@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: alex_q_2000\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: tmainform.backupbtn.caption
+msgctxt "tmainform.backupbtn.caption"
+msgid "Backup"
+msgstr "Бэкап"
+
+#: tmainform.backupbtn.hint
+msgctxt "tmainform.backupbtn.hint"
+msgid "[Enter] - Backup"
+msgstr "[Enter] - Бэкап"
+
+#: tmainform.cancelbtn.caption
+msgctxt "tmainform.cancelbtn.caption"
+msgid "Cancel"
+msgstr "Отмена"
+
+#: tmainform.cancelbtn.hint
+msgctxt "tmainform.cancelbtn.hint"
+msgid "[Esc - Cancel]"
+msgstr "[Esc - Отмена]"
+
+#: tmainform.caption
+msgid "GHBackup"
+msgstr ""
+
+#: tmainform.checkbox1.caption
+msgid "--depth 1"
+msgstr ""
+
+#: tmainform.checkbox1.hint
+msgid "Shallow clone"
+msgstr "Мелкий клон"
+
+#: tmainform.label1.caption
+msgid "Login:"
+msgstr "Логин:"
+
+#: tmainform.label2.caption
+msgid "Total repositories:"
+msgstr "Всего репозиториев:"
+
+#: tmainform.label3.caption
+msgid "Work directory:"
+msgstr "Рабочий каталог:"
+
+#: tmainform.label4.caption
+msgid "Backup file:"
+msgstr "Файл бэкапа:"
+
+#: tmainform.label5.caption
+msgctxt "tmainform.label5.caption"
+msgid "..."
+msgstr ""
+
+#: tmainform.seldirbtn.caption
+msgctxt "tmainform.seldirbtn.caption"
+msgid "..."
+msgstr ""
+
+#: tmainform.statictext1.caption
+msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+msgstr "Лицензия: GPLv3   Автор: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+
+#: unit1.sstartcloning
+msgid "Start cloning"
+msgstr "Старт клонирования"
+
+#: unit1.sstartwarning
+msgid "The working directory will be cleared! Continue?"
+msgstr "Рабочий каталог будет очищен! Продолжить?"
+
+#: unit1.swarningmsg
+msgid "Enter Login and Working directory!"
+msgstr "Введите Логин и Рабочий каталог!"

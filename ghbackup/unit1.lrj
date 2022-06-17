@@ -1,0 +1,16 @@
+{"version":1,"strings":[
+{"hash":210216560,"name":"tmainform.caption","sourcebytes":[71,72,66,97,99,107,117,112],"value":"GHBackup"},
+{"hash":87416858,"name":"tmainform.label1.caption","sourcebytes":[76,111,103,105,110,58],"value":"Login:"},
+{"hash":180741194,"name":"tmainform.label2.caption","sourcebytes":[84,111,116,97,108,32,114,101,112,111,115,105,116,111,114,105,101,115,58],"value":"Total repositories:"},
+{"hash":58615594,"name":"tmainform.label3.caption","sourcebytes":[87,111,114,107,32,100,105,114,101,99,116,111,114,121,58],"value":"Work directory:"},
+{"hash":116088906,"name":"tmainform.label4.caption","sourcebytes":[66,97,99,107,117,112,32,102,105,108,101,58],"value":"Backup file:"},
+{"hash":12558,"name":"tmainform.seldirbtn.caption","sourcebytes":[46,46,46],"value":"..."},
+{"hash":8529781,"name":"tmainform.checkbox1.hint","sourcebytes":[83,104,97,108,108,111,119,32,99,108,111,110,101],"value":"Shallow clone"},
+{"hash":180853249,"name":"tmainform.checkbox1.caption","sourcebytes":[45,45,100,101,112,116,104,32,49],"value":"--depth 1"},
+{"hash":12558,"name":"tmainform.label5.caption","sourcebytes":[46,46,46],"value":"..."},
+{"hash":248956965,"name":"tmainform.statictext1.caption","sourcebytes":[76,105,99,101,110,115,101,58,32,71,80,76,118,51,32,32,32,65,117,116,104,111,114,58,32,97,108,101,120,95,113,95,50,48,48,48,32,40,67,41,32,50,48,50,50,32,32,32,85,82,76,58,32,104,116,116,112,115,58,47,47,108,105,110,117,120,102,111,114,117,109,46,114,117],"value":"License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"},
+{"hash":239447136,"name":"tmainform.backupbtn.hint","sourcebytes":[91,69,110,116,101,114,93,32,45,32,66,97,99,107,117,112],"value":"[Enter] - Backup"},
+{"hash":75997888,"name":"tmainform.backupbtn.caption","sourcebytes":[66,97,99,107,117,112],"value":"Backup"},
+{"hash":99725997,"name":"tmainform.cancelbtn.hint","sourcebytes":[91,69,115,99,32,45,32,67,97,110,99,101,108,93],"value":"[Esc - Cancel]"},
+{"hash":77089212,"name":"tmainform.cancelbtn.caption","sourcebytes":[67,97,110,99,101,108],"value":"Cancel"}
+]}
