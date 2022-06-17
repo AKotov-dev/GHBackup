@@ -2,7 +2,7 @@
 name=ghbackup
 
 [VERSION]
-version=0.1
+version=0.2
 
 [RELEASE]
 release=0.mrx9
@@ -51,22 +51,8 @@ deb=1
 2=/usr/share/ghbackup/
 3=/usr/share/doc/ghbackup/
 
-[AFTERINSTALL]
-0=#!/bin/bash
-1=#ldconfig
-2=#update-desktop-database -q /usr/share/applications
-3=#update-mime-database /usr/share/mime
-4=#gtk-update-icon-cache -q -f /usr/share/icons/hicolor
-
-[AFTERREMOVE]
-0=#!/bin/bash
-1=#ldconfig
-2=#update-desktop-database -q /usr/share/applications
-3=#update-mime-database /usr/share/mime
-4=#gtk-update-icon-cache -q -f /usr/share/icons/hicolor
-
 [URL32]
-url32=11
+url32=https://github.com/AKotov-dev/GHBackup
 
 [URL64]
 url64=
@@ -81,4 +67,6 @@ devtool=Lazarus
 toolversion=2.2.0
 
 [INFO]
-0=v0.1 - Initial release
+0=v0.2 - cosmetic edits/events
+1=
+2=v0.1 - Initial release
