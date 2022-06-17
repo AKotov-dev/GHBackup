@@ -2,7 +2,7 @@
 name=ghbackup
 
 [VERSION]
-version=0.2
+version=0.3
 
 [RELEASE]
 release=0.mrx9
@@ -67,6 +67,9 @@ devtool=Lazarus
 toolversion=2.2.0
 
 [INFO]
-0=v0.2 - cosmetic edits/events
-1=
-2=v0.1 - Initial release
+0=v0.3
+1=+ repositories count (max): 1000
+2=
+3=v0.2 - cosmetic edits/events
+4=
+5=v0.1 - Initial release

@@ -49,8 +49,8 @@ msgid "Login:"
 msgstr "Логин:"
 
 #: tmainform.label2.caption
-msgid "Total repositories:"
-msgstr "Всего репозиториев:"
+msgid "Repositories count (max): 1000"
+msgstr "Количество репозиториев (max): 1000"
 
 #: tmainform.label3.caption
 msgid "Work directory:"

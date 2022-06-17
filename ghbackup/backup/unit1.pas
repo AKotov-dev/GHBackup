@@ -14,14 +14,13 @@ type
 
   TMainForm = class(TForm)
     CheckBox1: TCheckBox;
+    Label2: TLabel;
     Label5: TLabel;
     SelDirBtn: TBitBtn;
     Edit1: TEdit;
-    Edit2: TEdit;
     Edit3: TEdit;
     IniPropStorage1: TIniPropStorage;
     Label1: TLabel;
-    Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     LogMemo: TMemo;
@@ -30,7 +29,6 @@ type
     BackupBtn: TSpeedButton;
     CancelBtn: TSpeedButton;
     StaticText1: TStaticText;
-    UpDown1: TUpDown;
     procedure Edit3Change(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
@@ -88,8 +86,7 @@ var
   FStartBackup: TThread;
 begin
   //Проверка
-  if (Trim(Edit1.Text) = '') or (Trim(Edit2.Text) = '') or
-    (not DirectoryExists(Edit3.Text)) then
+  if (Trim(Edit1.Text) = '') or (not DirectoryExists(Edit3.Text)) then
   begin
     MessageDlg(SWarningMsg, mtWarning, [mbOK], 0);
     Exit;
@@ -105,8 +102,8 @@ begin
   command := '> ~/.config/ghbackup/start; cd "' + Edit3.Text +
     '"; find . -not -name "1-BACKUP" -delete; ' +
     'for name in $(curl -s "https://api.github.com/users/' + Edit1.Text +
-    '/repos?per_page=' + Edit2.Text + '" | grep -o ' + '''' + 'git@[^"]*' +
-    '''' + ' | cut -f2 -d"/"); do git clone ' + depth + ' "https://github.com/' +
+    '/repos?per_page=1000" | grep -o ' + '''' + 'git@[^"]*' + '''' +
+    ' | cut -f2 -d"/"); do git clone ' + depth + ' "https://github.com/' +
     Edit1.Text + '/$name' +
     '"; [[ -f ~/.config/ghbackup/start ]] || break; done; [[ -f ~/.config/ghbackup/start ]] || '
     + 'exit; tar --exclude="./1-BACKUP" -zcvf ./1-BACKUP/GitHub.tar.gz .';

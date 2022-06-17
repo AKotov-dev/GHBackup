@@ -1,16 +1,16 @@
 object MainForm: TMainForm
-  Left = 316
-  Height = 693
+  Left = 313
+  Height = 654
   Top = 124
-  Width = 939
+  Width = 763
   Caption = 'GHBackup'
-  ClientHeight = 693
-  ClientWidth = 939
+  ClientHeight = 654
+  ClientWidth = 763
   KeyPreview = True
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnKeyUp = FormKeyUp
-  SessionProperties = 'Edit1.Text;Edit2.Text;Edit3.Text;Left;Top'
+  SessionProperties = 'Edit1.Text;Edit3.Text;Left;Top'
   LCLVersion = '2.2.0.4'
   object Label1: TLabel
     AnchorSideTop.Control = Edit1
@@ -22,68 +22,31 @@ object MainForm: TMainForm
     BorderSpacing.Right = 5
     Caption = 'Login:'
   end
-  object Label2: TLabel
-    AnchorSideLeft.Control = Edit1
-    AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = Edit2
-    AnchorSideTop.Side = asrCenter
-    Left = 367
-    Height = 17
-    Top = 22
-    Width = 109
-    Anchors = [akTop]
-    BorderSpacing.Left = 8
-    BorderSpacing.Right = 5
-    Caption = 'Total repositories:'
-  end
   object Edit1: TEdit
     AnchorSideLeft.Control = Label1
     AnchorSideLeft.Side = asrBottom
-    AnchorSideRight.Control = Label2
     Left = 48
     Height = 36
     Top = 12
-    Width = 309
+    Width = 298
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     BorderSpacing.Right = 10
     TabOrder = 0
   end
-  object Edit2: TEdit
-    AnchorSideLeft.Control = Label2
-    AnchorSideLeft.Side = asrBottom
-    Left = 481
-    Height = 36
-    Top = 12
-    Width = 80
-    ReadOnly = True
-    TabOrder = 1
-  end
-  object UpDown1: TUpDown
-    Left = 561
-    Height = 36
-    Top = 12
-    Width = 25
-    Associate = Edit2
-    Increment = 10
-    Max = 10000
-    Min = 10
-    Position = 100
-    TabOrder = 2
-  end
   object LogMemo: TMemo
     AnchorSideTop.Control = Label4
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 542
+    Height = 503
     Top = 131
-    Width = 939
+    Width = 763
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Top = 8
     ReadOnly = True
     ScrollBars = ssVertical
-    TabOrder = 7
+    TabOrder = 5
     WantReturns = False
   end
   object Label3: TLabel
@@ -105,12 +68,12 @@ object MainForm: TMainForm
     Left = 103
     Height = 36
     Top = 56
-    Width = 447
+    Width = 407
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     OnChange = Edit3Change
     ReadOnly = True
-    TabOrder = 4
+    TabOrder = 2
   end
   object Label4: TLabel
     Left = 6
@@ -120,53 +83,53 @@ object MainForm: TMainForm
     Caption = 'Backup file:'
   end
   object ProgressBar1: TProgressBar
-    AnchorSideLeft.Control = SelDirBtn
-    AnchorSideLeft.Side = asrBottom
+    AnchorSideLeft.Control = CancelBtn
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = SelDirBtn
     AnchorSideBottom.Side = asrBottom
-    Left = 596
-    Height = 14
-    Top = 78
-    Width = 335
+    Left = 554
+    Height = 13
+    Top = 79
+    Width = 201
     Anchors = [akLeft, akRight, akBottom]
-    BorderSpacing.Left = 10
     BorderSpacing.Right = 8
-    TabOrder = 6
+    TabOrder = 4
   end
   object SelDirBtn: TBitBtn
     AnchorSideLeft.Control = Edit3
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = Edit3
-    AnchorSideRight.Control = UpDown1
-    AnchorSideRight.Side = asrBottom
+    AnchorSideRight.Control = CancelBtn
     AnchorSideBottom.Control = Edit3
     AnchorSideBottom.Side = asrBottom
-    Left = 550
+    Left = 510
     Height = 36
     Top = 56
-    Width = 36
+    Width = 39
     Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Right = 5
     Caption = '...'
     OnClick = SelDirBtnClick
-    TabOrder = 5
+    TabOrder = 3
   end
   object CheckBox1: TCheckBox
-    AnchorSideLeft.Control = UpDown1
+    AnchorSideLeft.Control = Edit1
     AnchorSideLeft.Side = asrBottom
-    Left = 596
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrCenter
+    Left = 361
     Height = 32
     Hint = 'Shallow clone'
-    Top = 16
+    Top = 14
     Width = 91
-    BorderSpacing.Left = 10
+    BorderSpacing.Left = 15
     Caption = '--depth 1'
     Checked = True
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
-    TabOrder = 3
+    TabOrder = 1
   end
   object Label5: TLabel
     AnchorSideLeft.Control = Label4
@@ -184,8 +147,8 @@ object MainForm: TMainForm
   object StaticText1: TStaticText
     Left = 0
     Height = 20
-    Top = 673
-    Width = 939
+    Top = 634
+    Width = 763
     Align = alBottom
     Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru'
     Color = clDefault
@@ -194,12 +157,12 @@ object MainForm: TMainForm
     Font.Name = 'Sans'
     ParentFont = False
     ParentColor = False
-    TabOrder = 8
+    TabOrder = 6
   end
   object BackupBtn: TSpeedButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 831
+    Left = 655
     Height = 40
     Hint = '[Enter] - Backup'
     Top = 12
@@ -289,7 +252,7 @@ object MainForm: TMainForm
   end
   object CancelBtn: TSpeedButton
     AnchorSideRight.Control = BackupBtn
-    Left = 730
+    Left = 554
     Height = 40
     Hint = '[Esc - Cancel]'
     Top = 12
@@ -377,13 +340,24 @@ object MainForm: TMainForm
     ShowHint = True
     ParentShowHint = False
   end
+  object Label2: TLabel
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 572
+    Height = 17
+    Top = 106
+    Width = 183
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 8
+    Caption = 'Repositories count (max): 1000'
+  end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
-    Left = 832
-    Top = 160
+    Left = 176
+    Top = 152
   end
   object IniPropStorage1: TIniPropStorage
     StoredValues = <>
-    Left = 704
-    Top = 159
+    Left = 56
+    Top = 152
   end
 end
