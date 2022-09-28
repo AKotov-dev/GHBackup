@@ -2,7 +2,7 @@
 name=ghbackup
 
 [VERSION]
-version=0.3
+version=0.4
 
 [RELEASE]
 release=0.mrx9
@@ -31,7 +31,7 @@ urlcopy=https://github.com/AKotov-dev/GHBackup
 license=GPLv3
 
 [DEPS]
-deps=curl git tar gzip
+deps=curl git tar gzip gtk2
 
 [META]
 meta=0
@@ -67,9 +67,14 @@ devtool=Lazarus
 toolversion=2.2.0
 
 [INFO]
-0=v0.3
-1=+ repositories count (max): 1000
-2=
-3=v0.2 - cosmetic edits/events
+0=v0.4
+1=+ Setting the backup depth
+2=+ Fixed the reaction to restarting the backup (Enter)
+3=+ Plasma: LCL Scaling (Hi-DPI)
 4=
-5=v0.1 - Initial release
+5=v0.3
+6=+ repositories count (max): 1000
+7=
+8=v0.2 - cosmetic edits/events
+9=
+10=v0.1 - Initial release

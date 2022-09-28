@@ -83,6 +83,9 @@ begin
     Application.ProcessMessages;
     ProgressBar1.Style := pbstMarquee;
     ProgressBar1.Refresh;
+    CheckBox1.Enabled := False;
+    SpinEdit1.Enabled := False;
+    BackupBtn.Enabled := False;
   end;
 end;
 
@@ -94,6 +97,9 @@ begin
     Application.ProcessMessages;
     ProgressBar1.Style := pbstNormal;
     ProgressBar1.Refresh;
+    CheckBox1.Enabled := True;
+    SpinEdit1.Enabled := True;
+    BackupBtn.Enabled := True;
   end;
 end;
 

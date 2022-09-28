@@ -26,11 +26,11 @@ msgid "GHBackup"
 msgstr ""
 
 #: tmainform.checkbox1.caption
-msgid "--depth 1"
+msgid "--depth="
 msgstr ""
 
 #: tmainform.checkbox1.hint
-msgid "Shallow clone"
+msgid "Full/Incomplete clone"
 msgstr ""
 
 #: tmainform.label1.caption
@@ -57,6 +57,10 @@ msgstr ""
 #: tmainform.seldirbtn.caption
 msgctxt "tmainform.seldirbtn.caption"
 msgid "..."
+msgstr ""
+
+#: tmainform.spinedit1.hint
+msgid "Cloning depth"
 msgstr ""
 
 #: tmainform.statictext1.caption

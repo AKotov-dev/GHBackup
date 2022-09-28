@@ -83,6 +83,12 @@ begin
     Application.ProcessMessages;
     ProgressBar1.Style := pbstMarquee;
     ProgressBar1.Refresh;
+
+    Edit1.Enabled := False;
+    Edit3.Enabled := False;
+    SelDirBtn.Enabled := False;
+    CheckBox1.Enabled := False;
+    SpinEdit1.Enabled := False;
     BackupBtn.Enabled := False;
   end;
 end;
@@ -95,6 +101,12 @@ begin
     Application.ProcessMessages;
     ProgressBar1.Style := pbstNormal;
     ProgressBar1.Refresh;
+
+    Edit1.Enabled := True;
+    Edit3.Enabled := True;
+    SelDirBtn.Enabled := True;
+    CheckBox1.Enabled := True;
+    SpinEdit1.Enabled := True;
     BackupBtn.Enabled := True;
   end;
 end;

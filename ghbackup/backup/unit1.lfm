@@ -1,16 +1,17 @@
 object MainForm: TMainForm
-  Left = 313
+  Left = 298
   Height = 654
   Top = 124
-  Width = 763
+  Width = 745
   Caption = 'GHBackup'
   ClientHeight = 654
-  ClientWidth = 763
+  ClientWidth = 745
   KeyPreview = True
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnKeyUp = FormKeyUp
-  SessionProperties = 'Edit1.Text;Edit3.Text;Left;Top'
+  OnShow = FormShow
+  SessionProperties = 'Edit1.Text;Edit3.Text;Left;SpinEdit1.Value;Top;CheckBox1.Checked'
   LCLVersion = '2.2.0.4'
   object Label1: TLabel
     AnchorSideTop.Control = Edit1
@@ -26,9 +27,9 @@ object MainForm: TMainForm
     AnchorSideLeft.Control = Label1
     AnchorSideLeft.Side = asrBottom
     Left = 48
-    Height = 36
+    Height = 37
     Top = 12
-    Width = 298
+    Width = 280
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     BorderSpacing.Right = 10
@@ -40,7 +41,7 @@ object MainForm: TMainForm
     Left = 0
     Height = 503
     Top = 131
-    Width = 763
+    Width = 745
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Top = 8
@@ -66,9 +67,9 @@ object MainForm: TMainForm
     AnchorSideLeft.Side = asrBottom
     AnchorSideRight.Control = SelDirBtn
     Left = 103
-    Height = 36
+    Height = 37
     Top = 56
-    Width = 407
+    Width = 369
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     OnChange = Edit3Change
@@ -88,10 +89,10 @@ object MainForm: TMainForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = SelDirBtn
     AnchorSideBottom.Side = asrBottom
-    Left = 554
-    Height = 14
-    Top = 78
-    Width = 201
+    Left = 516
+    Height = 13
+    Top = 80
+    Width = 221
     Anchors = [akLeft, akRight, akBottom]
     BorderSpacing.Right = 8
     TabOrder = 4
@@ -103,8 +104,8 @@ object MainForm: TMainForm
     AnchorSideRight.Control = CancelBtn
     AnchorSideBottom.Control = Edit3
     AnchorSideBottom.Side = asrBottom
-    Left = 510
-    Height = 36
+    Left = 472
+    Height = 37
     Top = 56
     Width = 39
     Anchors = [akTop, akRight, akBottom]
@@ -118,14 +119,15 @@ object MainForm: TMainForm
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = Edit1
     AnchorSideTop.Side = asrCenter
-    Left = 361
+    Left = 343
     Height = 32
-    Hint = 'Shallow clone'
+    Hint = 'Full/Incomplete clone'
     Top = 14
-    Width = 91
+    Width = 90
     BorderSpacing.Left = 15
-    Caption = '--depth 1'
+    Caption = '--depth='
     Checked = True
+    OnChange = CheckBox1Change
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
@@ -148,7 +150,7 @@ object MainForm: TMainForm
     Left = 0
     Height = 20
     Top = 634
-    Width = 763
+    Width = 745
     Align = alBottom
     Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru'
     Color = clDefault
@@ -162,11 +164,11 @@ object MainForm: TMainForm
   object BackupBtn: TSpeedButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 655
+    Left = 627
     Height = 40
     Hint = '[Enter] - Backup'
     Top = 12
-    Width = 100
+    Width = 110
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 8
     Caption = 'Backup'
@@ -252,11 +254,11 @@ object MainForm: TMainForm
   end
   object CancelBtn: TSpeedButton
     AnchorSideRight.Control = BackupBtn
-    Left = 554
+    Left = 516
     Height = 40
     Hint = '[Esc - Cancel]'
     Top = 12
-    Width = 100
+    Width = 110
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 1
     Caption = 'Cancel'
@@ -343,13 +345,33 @@ object MainForm: TMainForm
   object Label2: TLabel
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 572
+    Left = 554
     Height = 17
     Top = 106
     Width = 183
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 8
     Caption = 'Repositories count (max): 1000'
+  end
+  object SpinEdit1: TSpinEdit
+    AnchorSideLeft.Control = CheckBox1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = CheckBox1
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = SelDirBtn
+    AnchorSideRight.Side = asrBottom
+    Left = 433
+    Height = 37
+    Hint = 'Cloning depth'
+    Top = 12
+    Width = 78
+    Anchors = [akTop, akLeft, akRight]
+    MaxValue = 10000
+    MinValue = 1
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+    Value = 1
   end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
     Left = 176

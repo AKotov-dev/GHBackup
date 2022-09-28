@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Buttons, ComCtrls, IniPropStorage, Process, DefaultTranslator, LCLType;
+  Buttons, ComCtrls, IniPropStorage, Process, DefaultTranslator, LCLType, Spin;
 
 type
 
@@ -28,10 +28,13 @@ type
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     BackupBtn: TSpeedButton;
     CancelBtn: TSpeedButton;
+    SpinEdit1: TSpinEdit;
     StaticText1: TStaticText;
+    procedure CheckBox1Change(Sender: TObject);
     procedure Edit3Change(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
+    procedure FormShow(Sender: TObject);
     procedure SelDirBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure BackupBtnClick(Sender: TObject);
@@ -92,8 +95,9 @@ begin
     Exit;
   end;
 
-  //Глубина бэкапа (по умолчанию - только новейшие исходники без истории)
-  if CheckBox1.Checked then depth := '--depth 1'
+  //Глубина бэкапа (по умолчанию = 1 - только новейшие исходники без истории)
+
+  if CheckBox1.Checked then depth := '--depth=' + SpinEdit1.Text
   else
     depth := '';
 
@@ -127,6 +131,11 @@ begin
   Label5.Caption := Edit3.Text + '/1-BACKUP/GitHub.tar.gz';
 end;
 
+procedure TMainForm.CheckBox1Change(Sender: TObject);
+begin
+  SpinEdit1.Enabled:=CheckBox1.Checked;
+end;
+
 procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);
 begin
   //Если идёт Бэкап...
@@ -143,8 +152,13 @@ end;
 //ESCAPE - Отмена
 procedure TMainForm.FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
 begin
-  if Key = VK_RETURN then BackupBtn.Click;
+  if (Key = VK_RETURN) and (BackupBtn.Enabled) then BackupBtn.Click;
   if Key = VK_ESCAPE then CancelBtn.Click;
+end;
+
+procedure TMainForm.FormShow(Sender: TObject);
+begin
+  IniPropStorage1.Restore;
 end;
 
 //Выбор Рабочего каталога
