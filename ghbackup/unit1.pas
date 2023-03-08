@@ -51,6 +51,7 @@ resourcestring
   SStartWarning = 'The working directory will be cleared! Continue?';
   SStartCloning = 'Start cloning';
   SWarningClose = 'Backup is running! Cancel?';
+  SCompleted = 'Backup completed...';
 
 var
   MainForm: TMainForm;

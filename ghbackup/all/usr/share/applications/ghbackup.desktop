@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=GHBackup
+Comment=Backup of GitHub repositories
+Comment[ru]=Бэкап репозиториев GitHub
+Icon=ghbackup
+Exec=/usr/share/ghbackup/ghbackup
+Type=Application
+Categories=System;
+Terminal=false

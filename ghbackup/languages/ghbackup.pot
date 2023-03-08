@@ -67,6 +67,10 @@ msgstr ""
 msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
 msgstr ""
 
+#: unit1.scompleted
+msgid "Backup completed..."
+msgstr ""
+
 #: unit1.sstartcloning
 msgid "Start cloning"
 msgstr ""

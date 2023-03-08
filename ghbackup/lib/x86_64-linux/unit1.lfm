@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 298
+  Left = 287
   Height = 654
-  Top = 124
+  Top = 125
   Width = 745
   Caption = 'GHBackup'
   ClientHeight = 654
@@ -12,7 +12,7 @@ object MainForm: TMainForm
   OnKeyUp = FormKeyUp
   OnShow = FormShow
   SessionProperties = 'Edit1.Text;Edit3.Text;Left;SpinEdit1.Value;Top;CheckBox1.Checked'
-  LCLVersion = '2.2.0.4'
+  LCLVersion = '2.2.4.0'
   object Label1: TLabel
     AnchorSideTop.Control = Edit1
     AnchorSideTop.Side = asrCenter
@@ -22,6 +22,7 @@ object MainForm: TMainForm
     Width = 37
     BorderSpacing.Right = 5
     Caption = 'Login:'
+    ParentColor = False
   end
   object Edit1: TEdit
     AnchorSideLeft.Control = Label1
@@ -61,6 +62,7 @@ object MainForm: TMainForm
     Anchors = [akLeft, akBottom]
     BorderSpacing.Right = 2
     Caption = 'Work directory:'
+    ParentColor = False
   end
   object Edit3: TEdit
     AnchorSideLeft.Control = Label3
@@ -82,6 +84,7 @@ object MainForm: TMainForm
     Top = 106
     Width = 68
     Caption = 'Backup file:'
+    ParentColor = False
   end
   object ProgressBar1: TProgressBar
     AnchorSideLeft.Control = CancelBtn
@@ -145,6 +148,7 @@ object MainForm: TMainForm
     Anchors = [akTop, akLeft, akBottom]
     BorderSpacing.Left = 5
     Caption = '...'
+    ParentColor = False
   end
   object StaticText1: TStaticText
     Left = 0
@@ -352,6 +356,7 @@ object MainForm: TMainForm
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 8
     Caption = 'Repositories count (max): 1000'
+    ParentColor = False
   end
   object SpinEdit1: TSpinEdit
     AnchorSideLeft.Control = CheckBox1

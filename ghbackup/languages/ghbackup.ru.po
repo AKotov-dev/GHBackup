@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: tmainform.backupbtn.caption
 msgctxt "tmainform.backupbtn.caption"
@@ -77,6 +77,10 @@ msgstr "Глубина клонирования"
 #: tmainform.statictext1.caption
 msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
 msgstr "Лицензия: GPLv3   Автор: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+
+#: unit1.scompleted
+msgid "Backup completed..."
+msgstr "Резервное копирование завершено..."
 
 #: unit1.sstartcloning
 msgid "Start cloning"

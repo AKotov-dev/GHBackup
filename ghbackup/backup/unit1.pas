@@ -51,6 +51,7 @@ resourcestring
   SStartWarning = 'The working directory will be cleared! Continue?';
   SStartCloning = 'Start cloning';
   SWarningClose = 'Backup is running! Cancel?';
+  SCompleted = 'Completed...';
 
 var
   MainForm: TMainForm;
@@ -133,7 +134,7 @@ end;
 
 procedure TMainForm.CheckBox1Change(Sender: TObject);
 begin
-  SpinEdit1.Enabled:=CheckBox1.Checked;
+  SpinEdit1.Enabled := CheckBox1.Checked;
 end;
 
 procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);

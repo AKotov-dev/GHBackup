@@ -2,7 +2,7 @@
 name=ghbackup
 
 [VERSION]
-version=0.4
+version=0.5
 
 [RELEASE]
 release=1.mrx9
@@ -43,7 +43,7 @@ noarch=0
 sign=0
 
 [DEB]
-deb=1
+deb=0
 
 [FILES]
 0=/usr/share/applications/ghbackup.desktop
@@ -64,17 +64,22 @@ programname=GHBackup
 devtool=Lazarus
 
 [TOOLVERSION]
-toolversion=2.2.0
+toolversion=2.2.4
 
 [INFO]
-0=v0.4
-1=+ Setting the backup depth
-2=+ Fixed the reaction to restarting the backup (Enter)
-3=+ Plasma: LCL Scaling (Hi-DPI)
+0=v0.5
+1=+ Recompilation in Lazarus-2.2.4
+2=+ Notification of backup completion
+3=+ RPM packages for Mageia-8 and Mageia-9
 4=
-5=v0.3
-6=+ repositories count (max): 1000
-7=
-8=v0.2 - cosmetic edits/events
+5=v0.4
+6=+ Setting the backup depth
+7=+ Fixed the reaction to restarting the backup (Enter)
+8=+ Plasma: LCL Scaling (Hi-DPI)
 9=
-10=v0.1 - Initial release
+10=v0.3
+11=+ repositories count (max): 1000
+12=
+13=v0.2 - cosmetic edits/events
+14=
+15=v0.1 - Initial release
