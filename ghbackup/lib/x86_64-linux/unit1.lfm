@@ -39,8 +39,9 @@ object MainForm: TMainForm
   object LogMemo: TMemo
     AnchorSideTop.Control = Label4
     AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = StaticText1
     Left = 0
-    Height = 503
+    Height = 523
     Top = 131
     Width = 745
     Align = alBottom
@@ -153,11 +154,16 @@ object MainForm: TMainForm
     ParentColor = False
   end
   object StaticText1: TStaticText
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
     Left = 0
     Height = 20
     Top = 634
     Width = 745
-    Align = alBottom
+    Anchors = [akLeft, akRight, akBottom]
     Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2026   URL: https://github.com/AKotov-dev/GHBackup'
     Color = clDefault
     Font.Color = clGray
