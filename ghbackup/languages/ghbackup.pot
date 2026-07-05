@@ -37,10 +37,6 @@ msgstr ""
 msgid "Login:"
 msgstr ""
 
-#: tmainform.label2.caption
-msgid "Repositories count (max): 1000"
-msgstr ""
-
 #: tmainform.label3.caption
 msgid "Work directory:"
 msgstr ""
@@ -64,7 +60,7 @@ msgid "Cloning depth"
 msgstr ""
 
 #: tmainform.statictext1.caption
-msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+msgid "License: GPLv3   Author: alex_q_2000 (C) 2026   URL: https://github.com/AKotov-dev/GHBackup"
 msgstr ""
 
 #: unit1.scompleted

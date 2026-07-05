@@ -2,13 +2,13 @@
 name=ghbackup
 
 [VERSION]
-version=0.5
+version=0.6
 
 [RELEASE]
-release=1.mrx9
+release=1.mrx10
 
 [GROUP]
-group=Applications/System
+group=Archiving/Backup
 
 [DESCRIPTION]
 0=Backup of GitHub repositories
@@ -19,7 +19,7 @@ group=Applications/System
 maintainer=Alex Kotov
 
 [VENDOR]
-vendor=alex_q_2000 (C) 2022
+vendor=alex_q_2000 (C) 2026
 
 [SUMMARY]
 summary=Backup of GitHub repositories
@@ -39,23 +39,17 @@ meta=0
 [NOARCH]
 noarch=0
 
-[SIGN]
-sign=0
-
 [DEB]
 deb=0
 
 [FILES]
-0=/usr/share/applications/ghbackup.desktop
-1=/usr/share/icons/ghbackup.png
+0=/usr/share/icons/ghbackup.png
+1=/usr/share/applications/ghbackup.desktop
 2=/usr/share/ghbackup/
 3=/usr/share/doc/ghbackup/
 
 [URL32]
 url32=https://github.com/AKotov-dev/GHBackup
-
-[URL64]
-url64=
 
 [PROGRAMNAME]
 programname=GHBackup
@@ -64,22 +58,27 @@ programname=GHBackup
 devtool=Lazarus
 
 [TOOLVERSION]
-toolversion=2.2.4
+toolversion=4.4
 
 [INFO]
-0=v0.5
-1=+ Recompilation in Lazarus-2.2.4
-2=+ Notification of backup completion
-3=+ RPM packages for Mageia-8 and Mageia-9
+0=v0.6
+1=+ Build in Lazarus-4.4
+2=+ Pagination: Unlimited number of repositories
+3=+ RPM packages for Mageia-10
 4=
-5=v0.4
-6=+ Setting the backup depth
-7=+ Fixed the reaction to restarting the backup (Enter)
-8=+ Plasma: LCL Scaling (Hi-DPI)
+5=v0.5
+6=+ Recompilation in Lazarus-2.2.4
+7=+ Notification of backup completion
+8=+ RPM packages for Mageia-8 and Mageia-9
 9=
-10=v0.3
-11=+ repositories count (max): 1000
-12=
-13=v0.2 - cosmetic edits/events
+10=v0.4
+11=+ Setting the backup depth
+12=+ Fixed the reaction to restarting the backup (Enter)
+13=+ Plasma: LCL Scaling (Hi-DPI)
 14=
-15=v0.1 - Initial release
+15=v0.3
+16=+ repositories count (max): 1000
+17=
+18=v0.2 - cosmetic edits/events
+19=
+20=v0.1 - Initial release

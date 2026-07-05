@@ -5,8 +5,8 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Buttons, ComCtrls, IniPropStorage, Process, DefaultTranslator, LCLType, Spin;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
+  ComCtrls, IniPropStorage, Process, DefaultTranslator, LCLType, Spin, ExtCtrls;
 
 type
 
@@ -14,7 +14,7 @@ type
 
   TMainForm = class(TForm)
     CheckBox1: TCheckBox;
-    Label2: TLabel;
+    Image1: TImage;
     Label5: TLabel;
     SelDirBtn: TBitBtn;
     Edit1: TEdit;
@@ -61,9 +61,9 @@ implementation
 
 uses start_trd;
 
-{$R *.lfm}
+  {$R *.lfm}
 
-{ TMainForm }
+  { TMainForm }
 
 //Общая процедура запуска команд (асинхронная)
 procedure TMainForm.StartProcess(command: string);
@@ -105,13 +105,14 @@ begin
   //Создаём однострочную команду (~/.config/ghbackup/start - флаг для выхода из цикла)
   command := '';
   command := '> ~/.config/ghbackup/start; cd "' + Edit3.Text +
-    '"; find . -not -name "1-BACKUP" -delete; ' +
-    'for name in $(curl -s "https://api.github.com/users/' + Edit1.Text +
-    '/repos?per_page=1000" | grep -o ' + '''' + 'git@[^"]*' + '''' +
-    ' | cut -f2 -d"/"); do git clone ' + depth + ' "https://github.com/' +
-    Edit1.Text + '/$name' +
-    '"; [[ -f ~/.config/ghbackup/start ]] || break; done; [[ -f ~/.config/ghbackup/start ]] || '
-    + 'exit; tar --exclude="./1-BACKUP" -zcvf ./1-BACKUP/GitHub.tar.gz .';
+    '"; mkdir -p ./1-BACKUP; find . -not -name "1-BACKUP" -delete; ' +
+    'page=1; while :; do repos=$(curl -fsS -H "User-Agent: ghbackup" "https://api.github.com/users/'
+    + Edit1.Text + '/repos?per_page=100&page=$page" | grep -o ' +
+    '''' + 'https://github.com/[^"]*\.git' + '''' + ');' +
+    '[ -z "$repos" ] && break;  for repo in $repos; do git clone ' +
+    depth + ' "$repo"; ' +
+    '[[ -f ~/.config/ghbackup/start ]] || break 2; done; page=$((page+1)); done; ' +
+    '[[ -f ~/.config/ghbackup/start ]] || exit; tar --exclude="./1-BACKUP" -zcvf ./1-BACKUP/GitHub.tar.gz .';
 
   if MessageDlg(SStartWarning, mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
@@ -176,12 +177,23 @@ begin
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
+var
+  bmp: TBitmap;
 begin
-  if not DirectoryExists(GetUserDir + '.config') then MkDir(GetUserDir + '.config');
   if not DirectoryExists(GetUserDir + '.config/ghbackup') then
-    MkDir(GetUserDir + '.config/ghbackup');
+    ForceDirectories(GetUserDir + '.config/ghbackup');
 
   IniPropStorage1.IniFileName := GetUserDir + '.config/ghbackup/ghbackup.ini';
+
+  // Устраняем баг иконки приложения
+  bmp := TBitmap.Create;
+  try
+    bmp.PixelFormat := pf32bit;
+    bmp.Assign(Image1.Picture.Graphic);
+    Application.Icon.Assign(bmp);
+  finally
+    bmp.Free;
+  end;
 
   SelDirBtn.Width := SelDirBtn.Height;
   MainForm.Caption := Application.Title;

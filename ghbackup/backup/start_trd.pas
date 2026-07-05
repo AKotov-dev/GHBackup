@@ -99,7 +99,7 @@ begin
   with MainForm do
   begin
     LogMemo.Append('');
-    LogMemo.Lines.Append(SStopOperation);
+    LogMemo.Lines.Append(SCompleted);
     Application.ProcessMessages;
     ProgressBar1.Style := pbstNormal;
     ProgressBar1.Refresh;
