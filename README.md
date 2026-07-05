@@ -3,6 +3,6 @@ The program is designed to quickly clone public repositories from GitHub. After 
   
 **Dependencies:** git curl tar gzip gtk2
   
-![](https://github.com/AKotov-dev/GHBackup/blob/main/ScreenShot1.png)  
+![](https://github.com/AKotov-dev/GHBackup/blob/main/ScreenShot2.png)  
   
 Made and tested in Mageia-10.
